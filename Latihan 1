@@ -1,0 +1,29 @@
+txt = 'Hello World'
+
+# 1. Hitung jumlah karakternya
+jumlah_karakter = len(txt)
+print(f"1. Jumlah karakter: {jumlah_karakter}")
+
+# 2. Ambil karakter terakhir
+karakter_terakhir = txt[-1]
+print(f"2. Karakter terakhir: {karakter_terakhir}")
+
+# 3. Ambil karakter index ke-2 sampai index ke-4 (llo)
+karakter_2_sampai_4 = txt[2:5]
+print(f"3. Karakter index 2-4: {karakter_2_sampai_4}")
+
+# 4. Hilangkan spasi pada text tersebut (HelloWorld)
+tanpa_spasi = txt.replace(' ', '')
+print(f"4. Tanpa spasi: {tanpa_spasi}")
+
+# 5. Ubah text menjadi huruf besar
+huruf_besar = txt.upper()
+print(f"5. Huruf besar: {huruf_besar}")
+
+# 6. Ubah text menjadi huruf kecil
+huruf_kecil = txt.lower()
+print(f"6. Huruf kecil: {huruf_kecil}")
+
+# 7. Ganti karakter H dengan karakter J
+ganti_H_dengan_J = txt.replace('H', 'J')
+print(f"7. Ganti H dengan J: {ganti_H_dengan_J}")

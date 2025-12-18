@@ -1,0 +1,35 @@
+# Program Validasi Form Input Pendaftaran Online
+
+# Input data dari user
+nama = input("Masukkan nama: ")
+nomor_telepon = input("Masukkan nomor telepon: ")
+email = input("Masukkan email: ")
+
+# Variabel untuk menyimpan pesan error
+error_messages = []
+
+# Validasi 1: Nama harus hanya berisi huruf
+if not nama.isalpha():
+    error_messages.append("Error: Nama harus hanya berisi huruf!")
+
+# Validasi 2: Nomor telepon harus hanya berisi angka
+if not nomor_telepon.isdigit():
+    error_messages.append("Error: Nomor telepon harus hanya berisi angka!")
+
+# Validasi 3: Email harus mengandung karakter @ dan .
+if '@' not in email or '.' not in email:
+    error_messages.append("Error: Email harus mengandung karakter @ dan .")
+
+# Tampilkan hasil validasi
+print("\n" + "="*50)
+if len(error_messages) == 0:
+    print("Data pendaftaran valid")
+    print(f"\nData yang didaftarkan:")
+    print(f"Nama: {nama}")
+    print(f"Nomor Telepon: {nomor_telepon}")
+    print(f"Email: {email}")
+else:
+    print("Validasi gagal!")
+    for error in error_messages:
+        print(error)
+print("="*50)
